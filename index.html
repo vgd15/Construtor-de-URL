@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construtor de URL</title>
+</head>
+<body>
+    <label for="url-site"></label> website URL
+    <input type="text" id="url-site" required type="text" name="url-site">
+    
+    <label for="campaign-source">Origem da Campanha</label> 
+        <select id="campaign-source" required>
+            <option value="">Selecione</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Instagram">Instagram</option>
+            <option value="Google">Google</option>
+            <option value="Syngoo">Syngoo</option>
+            <option value="Rd+Station">RD Station</option>
+        </select>
+ 
+
+    <label for="campaign-medium">Meio da Campanha</label>
+        <select id="campaign-medium" required>
+            <option value="">Selecione</option>
+            <option value="Fluxo">Fluxo</option>
+            <option value="Newsletter">Newsletter</option>
+            <option value="Pago">Pago</option>
+            <option value="Organico">Organico</option>
+        </select>
+    
+
+    <label for="campaign-name"></label> Nome da Campanha
+    <input type="text" id="campaign-name" required type="text" name="campaign-name">
+
+    <button id="obter-url">OBTER URL</button>
+
+    <a class="made-url" href="#"></a>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
