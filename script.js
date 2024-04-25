@@ -18,7 +18,7 @@ function obtendoURL(){
         return match.toUpperCase()
     })
    
-    resultadoURL.innerHTML = `https://${urlSite}?utm_source=%5BNZ%5D+${campaignSource}&utm_medium=${campaignMedium}&utm_campaign=${campaignName}`
+    resultadoURL.innerHTML = `https://${urlSite}?utm_source=${campaignSource}&utm_medium=${campaignMedium}&utm_campaign=%5BNZ%5D+${campaignName}`
 }
 
 
