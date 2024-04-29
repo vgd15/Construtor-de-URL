@@ -1,12 +1,6 @@
 let copyButton = document.querySelector(".copy-button");
 copyButton.addEventListener("click", copyText);
 
-document.getElementById('campaign-name').addEventListener('change', obtendoURLOuvinte)
-
-function obtendoURLOuvinte(){
-    obtendoURL()
-}
-
 function obtendoURL() {
 
     var resultadoURL = document.querySelector(".made-url");
