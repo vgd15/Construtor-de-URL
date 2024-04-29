@@ -4,41 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Construtor de URL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css" type="text/css">
 </head>
 <body>
-    <label for="url-site"></label> website URL
-    <input type="url" id="url-site" required type="text" name="url-site">
+
+    <div class="container">
+
+      <h1 class="tittle-principal"><i>Construtor de URL de Campanha</i></h1>
+
+      <h2 class="subtitulo mb-3">Insira a URL do site e as informações da campanha</h2>
+
+      <p class="text mb-5">Preencha todos os campos marcados com um asterisco (*) e a URL da campanha será gerada para você.</p>
+   
+      <div class="inputs d-flex flex-column ">
+
+        <label for="url-site">URL do site* <br>
+               <input type="url" id="url-site" required type="text" name="url-site" placeholder="Insira o seu texto">
+               <small>A URL completa do site (por exemplo, https://www.example.com)</small>
+        </label> 
+        
+        <label for="campaign-source">Origem da Campanha*
+            <span class="my-select">
+                <select id="campaign-source" required>
+                    <option value="">Selecione</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Google">Google</option>
+                    <option value="Syngoo">Syngoo</option>
+                    <option value="Rd+Station">RD Station</option>
+                </select>
+            </span>
+            <small>O referenciador (por exemplo, google, facebook)</small>
+        </label> 
     
-    <label for="campaign-source">Origem da Campanha</label> 
-        <select id="campaign-source" required>
-            <option value="">Selecione</option>
-            <option value="Facebook">Facebook</option>
-            <option value="Instagram">Instagram</option>
-            <option value="Google">Google</option>
-            <option value="Syngoo">Syngoo</option>
-            <option value="Rd+Station">RD Station</option>
-        </select>
- 
-
-    <label for="campaign-medium">Meio da Campanha</label>
-        <select id="campaign-medium" required>
-            <option value="">Selecione</option>
-            <option value="Fluxo">Fluxo</option>
-            <option value="Newsletter">Newsletter</option>
-            <option value="Pago">Pago</option>
-            <option value="Organico">Organico</option>
-        </select>
+        <label for="campaign-medium">Meio da Campanha* <br>
+            <span class="my-select">
+            <select id="campaign-medium" required>
+                <option value="">Selecione</option>
+                <option value="Fluxo">Fluxo</option>
+                <option value="Newsletter">Newsletter</option>
+                <option value="Pago">Pago</option>
+                <option value="Organico">Organico</option>
+            </select>
+        </span>
+            <small>Meio de marketing (por exemplo, fluxo, pago)</small>
+        </label>
     
+        <label class="mb-2" for="campaign-name"> Nome da Campanha/Título do e-mail* <br>
+               <input type="text" id="campaign-name" required type="text" name="campaign-name" placeholder="Insira o seu texto">
+               <small>Produto, código promocional ou slogan (por exemplo, spring_sale). É necessário um nome ou ID da campanha.</small>
+        </label>
 
-    <label for="campaign-name"></label> Nome da Campanha
-    <input type="text" id="campaign-name" required type="text" name="campaign-name">
-
-    <button id="obter-url">OBTER URL</button>
-
-    <a class="made-url" id="text-to-copy" href="#"></a> 
+        <span class="text-footer d-flex justify-content-center align-items-center">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0_2_72" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+                <rect y="0.5" width="24" height="24" fill="#D9D9D9"/>
+                </mask>
+                <g mask="url(#mask0_2_72)">
+                <path d="M11 17.5H13V11.5H11V17.5ZM12 9.5C12.2833 9.5 12.5208 9.40417 12.7125 9.2125C12.9042 9.02083 13 8.78333 13 8.5C13 8.21667 12.9042 7.97917 12.7125 7.7875C12.5208 7.59583 12.2833 7.5 12 7.5C11.7167 7.5 11.4792 7.59583 11.2875 7.7875C11.0958 7.97917 11 8.21667 11 8.5C11 8.78333 11.0958 9.02083 11.2875 9.2125C11.4792 9.40417 11.7167 9.5 12 9.5ZM12 22.5C10.6167 22.5 9.31667 22.2375 8.1 21.7125C6.88333 21.1875 5.825 20.475 4.925 19.575C4.025 18.675 3.3125 17.6167 2.7875 16.4C2.2625 15.1833 2 13.8833 2 12.5C2 11.1167 2.2625 9.81667 2.7875 8.6C3.3125 7.38333 4.025 6.325 4.925 5.425C5.825 4.525 6.88333 3.8125 8.1 3.2875C9.31667 2.7625 10.6167 2.5 12 2.5C13.3833 2.5 14.6833 2.7625 15.9 3.2875C17.1167 3.8125 18.175 4.525 19.075 5.425C19.975 6.325 20.6875 7.38333 21.2125 8.6C21.7375 9.81667 22 11.1167 22 12.5C22 13.8833 21.7375 15.1833 21.2125 16.4C20.6875 17.6167 19.975 18.675 19.075 19.575C18.175 20.475 17.1167 21.1875 15.9 21.7125C14.6833 22.2375 13.3833 22.5 12 22.5Z" fill="#61DCAB"/>
+                </g>
+            </svg>
+                
+              Preencha os campos obrigatórios acima e uma URL será gerado para você aqui.</span>
     
+        <div class="painel-url">
+            <h2 class="title-painel-url mb-3">Compartilhe a URL gerada da campanha</h2>
+            <p class="text-painel-url mb-4">Use essa URL em qualquer canal promocional que você deseje que seja associado com essa campanha personalizada.</p>
+            
+            <div class="made-url-box d-flex">
+                <p class="made-url col-10" id="text-to-copy"></p>
+                <button class="copy-button col-2">
+                    <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.33341 19.1667C1.87508 19.1667 1.48272 19.0035 1.15633 18.6771C0.829943 18.3507 0.666748 17.9584 0.666748 17.5V5.83337H2.33341V17.5H11.5001V19.1667H2.33341ZM5.66675 15.8334C5.20841 15.8334 4.81605 15.6702 4.48966 15.3438C4.16328 15.0174 4.00008 14.625 4.00008 14.1667V2.50004C4.00008 2.04171 4.16328 1.64935 4.48966 1.32296C4.81605 0.996569 5.20841 0.833374 5.66675 0.833374H11.5001L16.5001 5.83337V14.1667C16.5001 14.625 16.3369 15.0174 16.0105 15.3438C15.6841 15.6702 15.2917 15.8334 14.8334 15.8334H5.66675ZM10.6667 6.66671H14.8334L10.6667 2.50004V6.66671Z" fill="#61DCAB"/>
+                    </svg></button>
+                <span>URL gerada</span>
+            </div>
+            
+        </div>
+
+      </div>
+    </div>
   
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 
 </body>
