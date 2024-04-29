@@ -11,6 +11,11 @@ body{
     padding: 0;
 }
 
+/* Cor do texto do autocomplete */
+input:-webkit-autofill {
+    -webkit-text-fill-color: #CCCCCC !important;
+}
+
 .container{
     margin-top:7%;
 }
@@ -57,10 +62,12 @@ label input{
     color:#CCCCCC;
     margin-top: 13px;
     margin-bottom:15px;
+    padding-left: 22px;;
 }
 
 label input::placeholder{
     background-color: #00175D;
+    padding-left: 22px;
 }
 
 label input::placeholder{
