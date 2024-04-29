@@ -59,3 +59,11 @@ function limparCampos(){
     
 }
 
+document.getElementById('svg-copy').addEventListener('click', function() {
+    this.classList.add('zoom');
+    setTimeout(() => {
+        this.classList.remove('zoom');
+    }, 200);
+});
+
+

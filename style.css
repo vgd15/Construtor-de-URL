@@ -140,6 +140,13 @@ small{
     position: relative;
 }
 
+#svg-copy{
+    transition: transform 0.3s ease-in-out;
+}
+#svg-copy.zoom{
+    transform: scale(1.6);
+}
+
 .copy-button:focus{
   outline: none;
 }
