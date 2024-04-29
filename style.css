@@ -177,5 +177,14 @@ body .text-footer.none{
  }
 
  @media screen and (max-width:991px){
-    
+    .inputs{
+        width: 100%;
+    }
+    .text-footer{
+        padding: 15px;
+        gap:10px;
+    }
+    .text-footer svg{
+        width: 40px;
+    }
  }
