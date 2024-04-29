@@ -183,6 +183,7 @@ body .text-footer.none{
     .text-footer{
         padding: 15px;
         gap:10px;
+        font-size:14px;
     }
     .text-footer svg{
         width: 40px;
