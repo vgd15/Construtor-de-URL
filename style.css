@@ -226,4 +226,8 @@ body .text-footer.none{
     .text-footer svg{
         width: 40px;
     }
+    .copy-button:hover .hover-copy {
+        display: none;
+    }
+
  }
