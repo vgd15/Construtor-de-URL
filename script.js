@@ -16,17 +16,27 @@ function obtendoURL() {
 
         const regex = /\s/g;
         const regex2 =  /\b\w/g;
-        const regex3 = /[\u0300-\u036f]/g
-    
+        const regex3 = /[\u0300-\u036f]/g;
+        const regex4 = /^(https?|ftp):\/\/[^\s\/$?.#][^\s]*$/;
+        var ok = regex4.test(urlSite);
+
         campaignName = campaignName.replace(regex, "+");
         campaignName = campaignName.normalize("NFD").replace(regex3,"");
         campaignName = campaignName.replace(regex2, function(match){
             return match.toUpperCase()
         }) 
+          
+        if (ok) {
+            
         painel.classList.add("active");
         textoFooter.classList.add("none");
         resultadoURL.innerHTML = `${urlSite}?utm_source=${campaignSource}&utm_medium=${campaignMedium}&utm_campaign=%5BNZ%5D+${campaignName}`
         limparCampos();
+
+        }else if(ok === false){
+            alert("URL inválida.");
+            limparCampos();
+        }
     }else{
         alert("Preencha todos os campos");
         limparCampos();

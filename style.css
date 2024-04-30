@@ -62,7 +62,6 @@ label input{
     color:#CCCCCC;
     margin-top: 13px;
     margin-bottom:15px;
-    padding-left: 22px;;
 }
 
 label input::placeholder{
@@ -212,6 +211,11 @@ body .text-footer.none{
     font-size: 22px;
     font-weight: 700;
     border-radius: 20px;
+    cursor: pointer;
+}
+.go:focus{
+    outline: none;
+    border:none;  
 }
 
  @media screen and (max-width:991px){
